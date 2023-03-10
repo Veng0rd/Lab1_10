@@ -32,6 +32,5 @@ if __name__ == '__main__':
         title_res += res[1]
         author_res += res[2]
     dict_res = {'Название': title_res, 'Автор': author_res, 'Цена': price_res}
-    results = pd.DataFrame.from_dict(dict_res).rename(
-        index=lambda x: x + 1)
+    results = pd.DataFrame.from_dict(dict_res).rename(index=lambda x: x + 1)
     results.to_excel('Python_book.xlsx')  # записываем в exel
