@@ -23,9 +23,7 @@ def parse(url):
 if __name__ == '__main__':
     url = 'https://www.chitai-gorod.ru/search?phrase=python&page='
     url_end = '&onlyAvailable=1'
-    price_res = []
-    title_res = []
-    author_res = []
+    price_res, title_res, author_res = [], [], []
     for i in range(1, 4):  # заходим на каждую страницу и результаты записываем в один массив
         res = parse(url + str(i) + url_end)
         price_res += res[0]
