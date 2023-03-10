@@ -31,8 +31,6 @@ if __name__ == '__main__':
         price_res += res[0]
         title_res += res[1]
         author_res += res[2]
-        print(str(i) + ')', len(title_res), len(author_res), len(price_res))
-
     dict_res = {'Название': title_res, 'Автор': author_res, 'Цена': price_res}
     results = pd.DataFrame.from_dict(dict_res).rename(
         index=lambda x: x + 1)
